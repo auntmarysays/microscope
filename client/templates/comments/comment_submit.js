@@ -4,8 +4,7 @@ Template.postEdit.onCreated(function() {
 
 Template.commentSubmit.helpers({
 	errorMessage: function(field) {
-		console.log(field)
-		return Session.get('commentSubmitErrors')[field] ? 'has-error' : '';
+		return Session.get('commentSubmitErrors')[field];
 	},
 	errorClass: function (field) {
 		return !!Session.get('commentSubmitErrors')[field] ? 'has-error' : '';
