@@ -3,9 +3,6 @@ Meteor.publish('posts', function() {
 });
 
 Meteor.publish('comments', function(postId) {
-	return Comments.find();
-});
-
-Meteor. publish('notifications', function() {
-	return Notifications.find();
+	check(postId, String);
+	return Comments.find({postId: postId});
 });
