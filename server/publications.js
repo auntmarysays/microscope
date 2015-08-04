@@ -1,10 +1,9 @@
-Meteor.publish('posts', function(){
+Meteor.publish('posts', function() {
 	return Posts.find();
 });
 
 Meteor.publish('comments', function(postId) {
-	check(postId, String);
-	return Comments.find({postId: postId});
+	return Comments.find();
 });
 
 Meteor. publish('notifications', function() {

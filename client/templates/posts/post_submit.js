@@ -42,7 +42,7 @@ Template.postSubmit.events({
 				return throwError(error.reason);
 
 			// show this result but route anyway
-			if (results.postExists)
+			if (result.postExists)
 				throwError('This link has already been posted');
 
 			Router.go('postPage', {_id: result._id});
